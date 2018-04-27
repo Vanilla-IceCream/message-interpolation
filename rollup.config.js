@@ -1,30 +1,17 @@
+import { readFileSync } from 'fs';
 import { join } from 'path';
 import babel from 'rollup-plugin-babel';
 
 import pkg from './package.json';
 
-const BABEL = {
+const babelrc = JSON.parse(readFileSync('./.babelrc', 'utf8'));
+
+babelrc.presets.splice(0, 1, ['env', { modules: false }]);
+babelrc.plugins.splice(0, 0, 'external-helpers');
+
+const BABEL_CONFIG = {
   babelrc: false,
-  presets: [
-    [
-      'env', {
-        modules: false,
-      },
-    ],
-    'stage-0',
-    'flow',
-  ],
-  plugins: [
-    'external-helpers',
-    [
-      'babel-plugin-root-import', [
-        {
-          rootPathPrefix: '~',
-          rootPathSuffix: 'src',
-        },
-      ],
-    ],
-  ],
+  ...babelrc,
   exclude: 'node_modules/**',
 };
 
@@ -36,7 +23,7 @@ export default [
       { file: pkg.module, format: 'es', sourcemap: true },
     ],
     plugins: [
-      babel(BABEL),
+      babel(BABEL_CONFIG),
     ],
     external: Object.keys(pkg.dependencies),
   },
@@ -54,7 +41,7 @@ export default [
       },
     ],
     plugins: [
-      babel(BABEL),
+      babel(BABEL_CONFIG),
     ],
     external: Object.keys(pkg.dependencies),
   },
