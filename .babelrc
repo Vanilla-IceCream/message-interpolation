@@ -1,16 +1,10 @@
 {
   "presets": [
-    [
-      "env", {
-        "modules": false
-      }
-    ],
+    "env",
     "stage-0",
     "flow"
   ],
   "plugins": [
-    "external-helpers",
-
     [
       "babel-plugin-root-import", [
         {

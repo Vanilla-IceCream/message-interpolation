@@ -8,7 +8,8 @@
   "scripts": {
     "build": "rollup -c",
     "test": "jest --coverage",
-    "coverage": "cat ./coverage/lcov.info | coveralls"
+    "coverage": "cat ./coverage/lcov.info | coveralls",
+    "typed": "flow-typed install"
   },
   "repository": {
     "type": "git",

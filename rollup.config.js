@@ -3,6 +3,31 @@ import babel from 'rollup-plugin-babel';
 
 import pkg from './package.json';
 
+const BABEL = {
+  babelrc: false,
+  presets: [
+    [
+      'env', {
+        modules: false,
+      },
+    ],
+    'stage-0',
+    'flow',
+  ],
+  plugins: [
+    'external-helpers',
+    [
+      'babel-plugin-root-import', [
+        {
+          rootPathPrefix: '~',
+          rootPathSuffix: 'src',
+        },
+      ],
+    ],
+  ],
+  exclude: 'node_modules/**',
+};
+
 export default [
   {
     input: join(__dirname, 'src/index.js'),
@@ -11,7 +36,7 @@ export default [
       { file: pkg.module, format: 'es', sourcemap: true },
     ],
     plugins: [
-      babel(),
+      babel(BABEL),
     ],
     external: Object.keys(pkg.dependencies),
   },
@@ -29,7 +54,7 @@ export default [
       },
     ],
     plugins: [
-      babel(),
+      babel(BABEL),
     ],
     external: Object.keys(pkg.dependencies),
   },
