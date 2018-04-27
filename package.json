@@ -1,0 +1,43 @@
+{
+  "name": "LIB_NAME",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/LIB_NAME.cjs.js",
+  "module": "dist/LIB_NAME.esm.js",
+  "browser": "dist/LIB_NAME.umd.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "coverage": "cat ./coverage/lcov.info | coveralls",
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vanilla-IceCream/vuex-bound.git"
+  },
+  "keywords": [
+    "Vuex"
+  ],
+  "author": "Vanilla IceCream",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Vanilla-IceCream/vuex-bound/issues"
+  },
+  "homepage": "https://github.com/Vanilla-IceCream/vuex-bound#readme",
+  "peerDependencies": {},
+  "dependencies": {},
+  "devDependencies": {
+    "babel-jest": "^22.4.3",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-import-resolver-babel-plugin-root-import": "^1.1.1",
+    "eslint-plugin-flowtype": "^2.46.3",
+    "eslint-plugin-flowtype-errors": "^3.5.1",
+    "eslint-plugin-import": "^2.11.0",
+    "flow-bin": "^0.71.0",
+    "flow-typed": "^2.4.0",
+    "jest": "^22.4.3",
+    "rollup": "^0.58.2",
+    "rollup-plugin-babel": "^3.0.4"
+  }
+}
