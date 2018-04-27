@@ -1,5 +1,5 @@
 import { join } from 'path';
-import buble from 'rollup-plugin-buble';
+import babel from 'rollup-plugin-babel';
 
 import pkg from './package.json';
 
@@ -10,9 +10,12 @@ export default [
       { file: pkg.main, format: 'cjs', sourcemap: true },
       { file: pkg.module, format: 'es', sourcemap: true },
     ],
-    plugins: [buble()],
+    plugins: [
+      babel(),
+    ],
     external: Object.keys(pkg.dependencies),
-  }, {
+  },
+  {
     input: join(__dirname, 'src/index.js'),
     output: [
       {
@@ -22,10 +25,12 @@ export default [
         globals: {
           rxjs: 'rxjs',
           'rxjs/operators': 'rxjs.operators',
-        }
+        },
       },
     ],
-    plugins: [buble()],
+    plugins: [
+      babel(),
+    ],
     external: Object.keys(pkg.dependencies),
-  }
+  },
 ];

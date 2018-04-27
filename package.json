@@ -6,28 +6,33 @@
   "module": "dist/LIB_NAME.esm.js",
   "browser": "dist/LIB_NAME.umd.js",
   "scripts": {
+    "build": "rollup -c",
     "test": "jest --coverage",
-    "coverage": "cat ./coverage/lcov.info | coveralls",
-    "build": "rollup -c"
+    "coverage": "cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Vanilla-IceCream/vuex-bound.git"
+    "url": "git+https://github.com/Vanilla-IceCream/Library-Boilerplate.git"
   },
-  "keywords": [
-    "Vuex"
-  ],
+  "keywords": [],
   "author": "Vanilla IceCream",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Vanilla-IceCream/vuex-bound/issues"
+    "url": "https://github.com/Vanilla-IceCream/Library-Boilerplate/issues"
   },
-  "homepage": "https://github.com/Vanilla-IceCream/vuex-bound#readme",
+  "homepage": "https://github.com/Vanilla-IceCream/Library-Boilerplate#readme",
   "peerDependencies": {},
   "dependencies": {},
   "devDependencies": {
+    "babel-core": "^6.26.2",
+    "babel-eslint": "^8.2.3",
     "babel-jest": "^22.4.3",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-root-import": "^5.1.0",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "coveralls": "^3.0.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-import-resolver-babel-plugin-root-import": "^1.1.1",
