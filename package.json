@@ -1,7 +1,7 @@
 {
   "name": "LIB_NAME",
   "version": "1.0.0",
-  "description": "",
+  "description": "Bare-bones example of how to create a library using Rollup, Jest, Babel, ESLint, Flow, Travis, and Coveralls.",
   "main": "dist/LIB_NAME.cjs.js",
   "module": "dist/LIB_NAME.esm.js",
   "browser": "dist/LIB_NAME.umd.js",
