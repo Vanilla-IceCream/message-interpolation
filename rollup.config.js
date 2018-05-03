@@ -1,6 +1,10 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
+import replace from 'rollup-plugin-replace';
+import uglify from 'rollup-plugin-uglify';
 
 import pkg from './package.json';
 
@@ -15,34 +19,50 @@ const BABEL_CONFIG = {
   exclude: 'node_modules/**',
 };
 
+const UMD_CONFIG = {
+  file: pkg.browser,
+  format: 'umd',
+  name: 'LIB_NAME',
+  globals: {
+    rxjs: 'rxjs',
+    'rxjs/operators': 'rxjs.operators',
+  },
+};
+
+const ROLLUP_CONFIG = {
+  input: join(__dirname, 'src/index.js'),
+  output: [
+    { file: pkg.main, format: 'cjs', sourcemap: true },
+    { file: pkg.module, format: 'es', sourcemap: true },
+  ],
+  plugins: [
+    babel(BABEL_CONFIG),
+  ],
+  external: Object.keys(pkg.dependencies),
+};
+
 export default [
+  ROLLUP_CONFIG,
   {
-    input: join(__dirname, 'src/index.js'),
-    output: [
-      { file: pkg.main, format: 'cjs', sourcemap: true },
-      { file: pkg.module, format: 'es', sourcemap: true },
-    ],
+    ...ROLLUP_CONFIG,
+    output: [UMD_CONFIG],
     plugins: [
       babel(BABEL_CONFIG),
+      replace({ 'process.env.NODE_ENV': JSON.stringify('development') }),
     ],
-    external: Object.keys(pkg.dependencies),
   },
   {
-    input: join(__dirname, 'src/index.js'),
+    ...ROLLUP_CONFIG,
     output: [
       {
-        file: pkg.browser,
-        format: 'umd',
-        name: 'LIB_NAME',
-        globals: {
-          rxjs: 'rxjs',
-          'rxjs/operators': 'rxjs.operators',
-        },
+        ...UMD_CONFIG,
+        file: (pkg.browser).replace('.js', '.min.js'),
       },
     ],
     plugins: [
       babel(BABEL_CONFIG),
+      replace({ 'process.env.NODE_ENV': JSON.stringify('production') }),
+      uglify(),
     ],
-    external: Object.keys(pkg.dependencies),
   },
 ];
