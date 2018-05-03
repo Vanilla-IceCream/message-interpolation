@@ -35,9 +35,7 @@ const ROLLUP_CONFIG = {
     { file: pkg.main, format: 'cjs', sourcemap: true },
     { file: pkg.module, format: 'es', sourcemap: true },
   ],
-  plugins: [
-    babel(BABEL_CONFIG),
-  ],
+  plugins: [babel(BABEL_CONFIG)],
   external: Object.keys(pkg.dependencies),
 };
 
@@ -48,6 +46,8 @@ export default [
     output: [UMD_CONFIG],
     plugins: [
       babel(BABEL_CONFIG),
+      resolve(),
+      commonjs(),
       replace({ 'process.env.NODE_ENV': JSON.stringify('development') }),
     ],
   },
@@ -61,6 +61,8 @@ export default [
     ],
     plugins: [
       babel(BABEL_CONFIG),
+      resolve(),
+      commonjs(),
       replace({ 'process.env.NODE_ENV': JSON.stringify('production') }),
       uglify(),
     ],
