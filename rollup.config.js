@@ -5,6 +5,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
 import replace from 'rollup-plugin-replace';
 import { uglify } from 'rollup-plugin-uglify';
+import envify from 'process-envify';
 
 import pkg from './package.json';
 
@@ -48,7 +49,7 @@ export default [
       babel(BABEL_CONFIG),
       resolve(),
       commonjs(),
-      replace({ 'process.env.NODE_ENV': JSON.stringify('development') }),
+      replace(envify({ NODE_ENV: 'development' })),
     ],
   },
   {
@@ -63,7 +64,7 @@ export default [
       babel(BABEL_CONFIG),
       resolve(),
       commonjs(),
-      replace({ 'process.env.NODE_ENV': JSON.stringify('production') }),
+      replace(envify({ NODE_ENV: 'production' })),
       uglify(),
     ],
   },
