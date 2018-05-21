@@ -10,5 +10,10 @@ cache:
   directories: node_modules
 
 before_script: yarn install && yarn typed
-script: yarn test
-after_success: yarn run coverage
+
+script:
+  - yarn build
+  - yarn lint
+  - yarn test
+
+after_success: yarn coverage
