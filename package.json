@@ -15,15 +15,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Vanilla-IceCream/Library-Boilerplate.git"
+    "url": "git+https://github.com/Vanilla-IceCream/Library-Starter.js.git"
   },
   "keywords": [],
   "author": "Vanilla IceCream",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Vanilla-IceCream/Library-Boilerplate/issues"
+    "url": "https://github.com/Vanilla-IceCream/Library-Starter.js/issues"
   },
-  "homepage": "https://github.com/Vanilla-IceCream/Library-Boilerplate#readme",
+  "homepage": "https://github.com/Vanilla-IceCream/Library-Starter.js#readme",
   "peerDependencies": {},
   "dependencies": {},
   "devDependencies": {

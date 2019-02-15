@@ -1,4 +1,4 @@
-# Library Boilerplate [![Build Status](https://travis-ci.org/Vanilla-IceCream/Library-Boilerplate.svg?branch=master)](https://travis-ci.org/Vanilla-IceCream/Library-Boilerplate) [![Coverage Status](https://coveralls.io/repos/github/Vanilla-IceCream/Library-Boilerplate/badge.svg?branch=master)](https://coveralls.io/github/Vanilla-IceCream/Library-Boilerplate?branch=master) [![devDependencies Status](https://david-dm.org/Vanilla-IceCream/Library-Boilerplate/dev-status.svg)](https://david-dm.org/Vanilla-IceCream/Library-Boilerplate?type=dev)
+# Library-Starter.js [![Build Status](https://travis-ci.org/Vanilla-IceCream/Library-Starter.js.svg?branch=master)](https://travis-ci.org/Vanilla-IceCream/Library-Starter.js) [![Coverage Status](https://coveralls.io/repos/github/Vanilla-IceCream/Library-Starter.js/badge.svg?branch=master)](https://coveralls.io/github/Vanilla-IceCream/Library-Starter.js?branch=master) [![devDependencies Status](https://david-dm.org/Vanilla-IceCream/Library-Starter.js/dev-status.svg)](https://david-dm.org/Vanilla-IceCream/Library-Starter.js?type=dev)
 
 Bare-bones example of how to create a library using Rollup, Jest, Babel, ESLint, Flow, Travis, Coveralls, and David.
 
@@ -7,8 +7,8 @@ Bare-bones example of how to create a library using Rollup, Jest, Babel, ESLint,
 1. Clone this repository and install its dependencies
 
 ```bash
-$ git clone https://github.com/Vanilla-IceCream/Library-Boilerplate
-$ cd Library-Boilerplate
+$ git clone https://github.com/Vanilla-IceCream/Library-Starter.js <LIB_NAME>
+$ cd <LIB_NAME>
 $ yarn install && yarn typed
 ```
 
