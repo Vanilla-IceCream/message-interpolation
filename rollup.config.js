@@ -34,7 +34,7 @@ const ROLLUP_CONFIG = {
   input: join(__dirname, 'src/index.js'),
   output: [
     { file: pkg.main, format: 'cjs', sourcemap: true },
-    { file: pkg.module, format: 'es', sourcemap: true },
+    { file: pkg.module, format: 'esm', sourcemap: true },
   ],
   plugins: [babel(BABEL_CONFIG)],
   external: Object.keys(pkg.dependencies),
