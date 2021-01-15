@@ -5,15 +5,11 @@ node_js:
 
 install: true
 
-cache:
-  yarn: true
-  directories: node_modules
-
-before_script: yarn install && yarn typed
+before_script: pnpm install
 
 script:
-  - yarn build
-  - yarn lint
-  - yarn test
+  - pnpm build
+  - pnpm lint
+  - pnpm test
 
-after_success: yarn coverage
+after_success: pnpm coverage

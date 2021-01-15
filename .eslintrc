@@ -1,7 +1,6 @@
 {
   "plugins": [
-    "flowtype",
-    "flowtype-errors"
+    "prettier"
   ],
   "env": {
     "browser": true,
@@ -12,25 +11,15 @@
   },
   "globals": {},
   "extends": [
-    "airbnb-base",
-    "plugin:flowtype/recommended"
+    "prettier"
   ],
   "parser": "babel-eslint",
   "parserOptions": {
     "sourceType": "module"
   },
-  "settings": {
-    "import/resolver": {
-      "babel-plugin-root-import": {
-        "rootPathPrefix": "~",
-        "rootPathSuffix": "src"
-      }
-    }
-  },
+  "settings": {},
   "rules": {
     // Plugins
-    "flowtype-errors/show-errors": "error",
-    "flowtype-errors/show-warnings": "warn",
 
     // Possible Errors
 

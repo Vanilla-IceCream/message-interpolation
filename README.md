@@ -1,6 +1,6 @@
 # Library-Starter [![Build Status](https://travis-ci.org/Vanilla-IceCream/Library-Starter.svg?branch=master)](https://travis-ci.org/Vanilla-IceCream/Library-Starter) [![Coverage Status](https://coveralls.io/repos/github/Vanilla-IceCream/Library-Starter/badge.svg?branch=master)](https://coveralls.io/github/Vanilla-IceCream/Library-Starter?branch=master) [![devDependencies Status](https://david-dm.org/Vanilla-IceCream/Library-Starter/dev-status.svg)](https://david-dm.org/Vanilla-IceCream/Library-Starter?type=dev)
 
-Bare-bones example of how to create a library using Rollup, Jest, Babel, ESLint, Flow, Travis, Coveralls, and David.
+Bare-bones example of how to create a library using Rollup, Babel, ESLint, Prettier, Jest, Travis, Coveralls, and David.
 
 ## Getting Started
 
@@ -9,15 +9,18 @@ Bare-bones example of how to create a library using Rollup, Jest, Babel, ESLint,
 ```bash
 $ git clone https://github.com/Vanilla-IceCream/Library-Starter <LIB_NAME>
 $ cd <LIB_NAME>
-$ yarn install && yarn typed
-```
 
-`yarn typed` searches the libdef repo and download all the libdefs that are relevant for project and install them.
+$ npm install
+# or pnpm install
+# or yarn install
+```
 
 2. Watch files and recompile whenever they change
 
 ```bash
-$ yarn start
+$ npm start
+# or pnpm start
+# or yarn start
 ```
 
 `yarn start` builds the library, then keeps rebuilding it whenever the source files change.
@@ -25,7 +28,9 @@ $ yarn start
 3. Compile and bundle code
 
 ```bash
-$ yarn build
+$ npm run build
+# or pnpm build
+# or yarn build
 ```
 
 `yarn build` builds the library to `dist`, generating three major files:
@@ -37,7 +42,9 @@ $ yarn build
 4. Check the code quality
 
 ```bash
-$ yarn lint
+$ npm run lint
+# or pnpm lint
+# or yarn lint
 ```
 
 `yarn lint` checks the code, whether it meets [Airbnb's JavaScript style guide](https://github.com/airbnb/javascript), and type checking using [Flow](https://github.com/facebook/flow).
@@ -45,7 +52,9 @@ $ yarn lint
 5. Run the unit tests
 
 ```bash
-$ yarn test
+$ npm test
+# or pnpm test
+# or yarn test
 ```
 
 `yarn test` runs the unit tests using [Jest](https://github.com/facebook/jest) to check if the function is executable.

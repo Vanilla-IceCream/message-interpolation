@@ -1,1 +1,0 @@
-{"version":3,"file":"LIB_NAME.esm.js","sources":["../src/index.js"],"sourcesContent":["// @flow\n\nexport default (): string => {\n  const LIB_NAME = 'LIB_NAME';\n  return LIB_NAME;\n};\n"],"names":["LIB_NAME"],"mappings":"AAEA,aAAe,YAAc;MACrBA,WAAW,UAAjB;SACOA,QAAP;CAFF;;;;"}
