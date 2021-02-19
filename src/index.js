@@ -1,4 +1,3 @@
-export default () => {
-  const LIB_NAME = 'LIB_NAME';
-  return LIB_NAME;
+export default (tpl, data) => {
+  return tpl.replace(/{([^}]+)?}/gm, (match, p1) => data[p1]);
 };

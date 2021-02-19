@@ -1,10 +1,9 @@
 {
-  "name": "LIB_NAME",
+  "name": "message-interpolation",
   "version": "1.0.0",
-  "description": "Bare-bones example of how to create a library using Rollup, Babel, ESLint, Prettier, Jest, Travis, Coveralls, and David.",
-  "main": "dist/LIB_NAME.cjs.js",
-  "module": "dist/LIB_NAME.esm.js",
-  "browser": "dist/LIB_NAME.umd.js",
+  "description": "",
+  "main": "dist/message-interpolation.cjs.js",
+  "module": "dist/message-interpolation.esm.js",
   "files": [
     "dist"
   ],
@@ -17,15 +16,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Vanilla-IceCream/LIB_NAME.git"
+    "url": "git+https://github.com/Vanilla-IceCream/message-interpolation.git"
   },
   "keywords": [],
   "author": "Vanilla IceCream",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Vanilla-IceCream/LIB_NAME/issues"
+    "url": "https://github.com/Vanilla-IceCream/message-interpolation/issues"
   },
-  "homepage": "https://github.com/Vanilla-IceCream/LIB_NAME#readme",
+  "homepage": "https://github.com/Vanilla-IceCream/message-interpolation#readme",
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.12.10",
