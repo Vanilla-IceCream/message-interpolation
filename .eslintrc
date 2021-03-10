@@ -18,19 +18,5 @@
     "sourceType": "module"
   },
   "settings": {},
-  "rules": {
-    // Plugins
-
-    // Possible Errors
-
-    // Best Practices
-
-    // Variables
-
-    // Node.js and CommonJS
-
-    // Stylistic Issues
-
-    // JS.Next
-  }
+  "rules": {}
 }

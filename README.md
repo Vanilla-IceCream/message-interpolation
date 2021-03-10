@@ -1,5 +1,9 @@
 # Message Interpolation
 
+The process of formatting messages for internationalization.
+
+## Install
+
 ```sh
 $ npm i message-interpolation -S
 # or
@@ -7,6 +11,8 @@ $ yarn add message-interpolation
 # or
 $ pnpm i message-interpolation -S
 ```
+
+## Usage
 
 ```js
 import mi from 'message-interpolation';
