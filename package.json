@@ -1,6 +1,6 @@
 {
   "name": "message-interpolation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The process of formatting messages for internationalization.",
   "main": "dist/message-interpolation.cjs.js",
   "module": "dist/message-interpolation.esm.js",
@@ -18,7 +18,13 @@
     "type": "git",
     "url": "git+https://github.com/Vanilla-IceCream/message-interpolation.git"
   },
-  "keywords": ["I18n", "Message Format Syntax", "Named interpolation", "List interpolation"],
+  "keywords": [
+    "I18n",
+    "L10n",
+    "Message Format Syntax",
+    "Named interpolation",
+    "List interpolation"
+  ],
   "author": "Vanilla IceCream",
   "license": "MIT",
   "bugs": {

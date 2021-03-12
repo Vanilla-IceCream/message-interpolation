@@ -1,3 +1,4 @@
 export default (tpl, data) => {
-  return tpl.replace(/{([^}]+)?}/gm, (match, p1) => data[p1]);
+  if (tpl) return tpl.replace(/{([^}]+)?}/gm, (match, p1) => data[p1]);
+  return tpl;
 };

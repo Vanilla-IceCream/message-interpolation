@@ -12,4 +12,9 @@ describe('Message Interpolation', () => {
     const alphabet = `{0} B {1} D {2} F G`;
     expect(mi(alphabet, ['A', 'C', 'E'])).toMatch('A B C D E F G');
   });
+
+  it('should get empty string', () => {
+    const alphabet = '';
+    expect(mi(alphabet, [''])).toMatch('');
+  });
 });
