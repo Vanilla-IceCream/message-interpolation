@@ -1,29 +1,32 @@
 {
   "name": "message-interpolation",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "The process of formatting messages for internationalization.",
-  "main": "dist/message-interpolation.cjs.js",
-  "module": "dist/message-interpolation.esm.js",
+  "main": "./dist/message-interpolation.umd.cjs",
+  "module": "./dist/message-interpolation.js",
+  "types": "./dist/message-interpolation.d.ts",
+  "type": "module",
   "files": [
     "dist"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/message-interpolation.js",
+      "require": "./dist/message-interpolation.umd.cjs"
+    }
+  },
   "scripts": {
-    "start": "rollup -c -w",
-    "build": "rollup -c",
-    "lint": "eslint 'src' 'test'",
-    "test": "jest --coverage",
-    "coverage": "cat ./coverage/lcov.info | coveralls"
+    "build": "vite build",
+    "test": "vitest --run --coverage"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Vanilla-IceCream/message-interpolation.git"
   },
   "keywords": [
-    "I18n",
-    "L10n",
-    "Message Format Syntax",
-    "Named interpolation",
-    "List interpolation"
+    "i18n",
+    "l10n",
+    "translation"
   ],
   "author": "Vanilla IceCream",
   "license": "MIT",
@@ -31,20 +34,10 @@
     "url": "https://github.com/Vanilla-IceCream/message-interpolation/issues"
   },
   "homepage": "https://github.com/Vanilla-IceCream/message-interpolation#readme",
-  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
-    "@rollup/plugin-babel": "^5.2.2",
-    "@rollup/plugin-commonjs": "^17.0.0",
-    "@rollup/plugin-node-resolve": "^11.0.1",
-    "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.6.3",
-    "eslint": "^7.17.0",
-    "eslint-config-prettier": "^7.1.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "jest": "^26.6.3",
-    "prettier": "^2.2.1",
-    "rollup": "^2.36.1"
+    "@vitest/coverage-c8": "^0.25.8",
+    "vite": "^4.0.1",
+    "vite-plugin-dts": "^1.7.1",
+    "vitest": "^0.25.8"
   }
 }

@@ -1,6 +1,6 @@
-import mi from '../src';
+import { describe, it, expect } from 'vitest';
 
-process.chdir(__dirname);
+import mi from './message-interpolation';
 
 describe('Message Interpolation', () => {
   it('should get Hello, World!', () => {
